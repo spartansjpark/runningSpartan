@@ -165,7 +165,7 @@
             class Obstacle {
                 constructor() {
                     this.x = CANVAS_WIDTH;
-                    this.y = Math.floor(Math.random() * (CANVAS_HEIGHT - OBSTACLE_HEIGHT - 30)) + 30;
+                    this.y = Math.floor(Math.random() * (CANVAS_HEIGHT - OBSTACLE_HEIGHT - 30)) + 100;
                     this.width = OBSTACLE_WIDTH;
                     this.height = OBSTACLE_HEIGHT;
                 }
@@ -227,7 +227,7 @@
                         scoreSound.play();
                     }
                     if (isCollision(runner, obs)) {
-                        gameOver = true;
+                        gameOver = false;
                         bgmSound.pause();
                         defeatSound.play();
                     }
